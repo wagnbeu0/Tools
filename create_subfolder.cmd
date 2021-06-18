@@ -2,8 +2,9 @@
 set Mainfolder=20
 set subfolder=30
 set count_files=100
+REM Put a picture named bild.jpg in the current folder
 set template_file=bild.jpg
-set root_folder=U:\Nextcloud\intranet.ben-wagner.de\TEMP
+set root_folder=D:\TEMP
 
 REM Create Mainfolder
 FOR /L %%i IN (1,1,%MAINFOLDER%) DO (
