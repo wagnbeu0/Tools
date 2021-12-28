@@ -12,7 +12,7 @@ echo Update local sources
 apt update 
 
 echo Install PHP8
-apt install php8.0-{fpm,gd,mysql,curl,xml,zip,intl,mbstring,bz2,ldap,apcu,bcmath,gmp,imagick,igbinary,redis,smbclient,cli,common,opcache,readline} imagemagick
+apt install -y php8.0-{fpm,gd,mysql,curl,xml,zip,intl,mbstring,bz2,ldap,apcu,bcmath,gmp,imagick,igbinary,redis,smbclient,cli,common,opcache,readline} imagemagick
 
 a2enmod proxy_fcgi setenvif
 a2enconf php8.0-fpm
