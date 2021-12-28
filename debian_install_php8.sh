@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Uninstall old php7.x installation
-apt remove -y libapache2-mod-php7.4* php-apcu-bc* php7.0-apcu* php7.0-apcu-bc* php7.0-imagick* php7.1-apcu* php7.1-apcu-bc* php7.1-imagick* php7.2-apcu* php7.2-apcu-bc* php7.2-imagick* php7.3-apcu* php7.3-apcu-bc* php7.3-bcmath* php7.3-bz2* php7.3-cli* php7.3-common* php7.3-curl* php7.3-fpm* php7.3-gd* php7.3-imagick* php7.3-intl* php7.3-json* php7.3-ldap* php7.3-mbstring* php7.3-mysql* php7.3-opcache* php7.3-readline* php7.3-xml* php7.3-zip* php7.4* php7.4-apcu* php7.4-apcu-bc* php7.4-bcmath* php7.4-bz2* php7.4-cli* php7.4-common* php7.4-curl* php7.4-fpm* php7.4-gd* php7.4-gmp* php7.4-igbinary* php7.4-imagick* php7.4-intl* php7.4-json* php7.4-mbstring* php7.4-mysql* php7.4-opcache* php7.4-readline* php7.4-redis* php7.4-smbclient* php7.4-soap* php7.4-xml* php7.4-zip*
+apt remove -y libapache2-mod-php7* php-apcu-bc* php7*
 
 # Add Repo for PHP8
 echo "deb [arch=amd64] https://packages.sury.org/php/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/php.list
@@ -16,7 +16,7 @@ apt install -y php8.0-{fpm,gd,mysql,curl,xml,zip,intl,mbstring,bz2,ldap,apcu,bcm
 
 a2enmod proxy_fcgi setenvif
 a2enconf php8.0-fpm
-systemctl reload apache2
+
 
 echo Do some modifications
 cp /etc/php/8.0/fpm/pool.d/www.conf /etc/php/8.0/fpm/pool.d/www.conf.bak
